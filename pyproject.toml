@@ -6,6 +6,8 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "accelerate>=1.10.1",
+    "ipython>=9.5.0",
     "qwen-vl-utils[decord]>=0.0.11",
+    "torchvision>=0.23.0",
     "transformers==4.51.3",
 ]

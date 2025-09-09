@@ -1,0 +1,31 @@
+# VQA Answer Generation Task: Creating Answers for Complex Reasoning Questions
+
+## Task Overview
+Generate concise answers for complex questions based on multimodal input (video + timestamps)
+
+## Input Data
+You will receive:
+- **VQA Question**: A question that requires complex reasoning based on the video content. A file named `question_xxxx.txt`(where xxx is an integer)
+- **Timestamp**: A list of [start, end] times in seconds that represent the video segments. A file named `time_xxx.txt` (where xxx is an integer)
+
+## Answer Requirements
+- **Conciseness**: ≤10 words
+- **Accuracy**: Logically inferred from evidence, not speculative
+- **Precision**: Direct and correct based on the input information
+
+For each question, use exactly this format:
+```
+A: <your answer>
+[[start1, end1], [start2, end2], [start3, end3]]
+```
+
+### Critical Timestamp Rules
+- **Evidence Justification**: The timestamps in the final line represent the **evidence** used to derive the answer
+- **Exact Reuse Only**: Use only the original [start, end] values provided in the input - do not create, modify, or merge timestamps
+- **Multiple Selection**: Include all relevant timestamps that justify your answer
+
+## Generation Instructions
+1. **Generate answers** that are following the Answer Requirements above
+2. **Select appropriate timestamps** that justify each answer
+
+Generate your answers and select appropriate timestamps following the exact Output Format above.
