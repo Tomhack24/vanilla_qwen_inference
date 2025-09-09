@@ -110,8 +110,7 @@ def inference(video_path, prompt, max_new_tokens=2048, total_pixels=20480 * 28 *
 
 
 
-
-if __name__ == "__main__":
+def main():
     with open("prompts/prompt_inference.txt", "r") as f:
         PROMPT = f.read()
 
@@ -132,3 +131,7 @@ if __name__ == "__main__":
         min_pixels=14 * 28 * 28,
     )
     print(res)
+
+
+if __name__ == "__main__":
+    main()
