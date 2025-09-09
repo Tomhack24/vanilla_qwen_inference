@@ -84,7 +84,7 @@ def create_image_grid(images, num_columns=8):
 
     return grid_image
 
-def inference(video_path, prompt, max_new_tokens=2048, total_pixels=20480 * 28 * 28, min_pixels=16 * 28 * 28):
+def inference(video_path, prompt, max_new_tokens=2048, total_pixels=20480 * 28 * 28, min_pixels=16 * 28 * 28, model=None, processor=None):
     messages = [
         {"role": "system", "content": "You are a helpful assistant."},
         {"role": "user", "content": [
@@ -129,7 +129,10 @@ def main():
         prompt=PROMPT,
         total_pixels=4096 * 28 * 28,
         min_pixels=14 * 28 * 28,
-    )
+        model=model,
+        processor=processor
+    )                                   
+
     print(res)
 
 
